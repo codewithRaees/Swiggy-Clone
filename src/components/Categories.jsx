@@ -25,7 +25,7 @@ const Categories = () => {
 
         </div>
       </div>
-      <div className="categories flex    overflow-hidden ">
+      <div className="categories flex py-5    overflow-hidden ">
         {
           itemsCategories.map((category, index) =>
           (<div style={{
