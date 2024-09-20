@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import React, { useEffect, useRef, useState } from 'react'
 import CityRestaurant from '../assets/Data/CityRestaurant'
 import { CgOptions } from "react-icons/cg";
 import { RxCaretDown } from "react-icons/rx";
 import { MdStarRate } from "react-icons/md";
 
-const CityRestaurants = () => {
+const CityRestaurants = ({isSticky,stickyDivRef}) => {
     const [slide, setSlide] = useState(0)
+  
     return (
         <div className='city-restaurants max-w-screen-lg  mx-auto'>
             <div className="sliderTop  justify-between px-1 py-2 items-center  ">
                 <h1 className='text-2xl font-extrabold font-[Poppins]'>Top restaurant chains in Mumbai</h1>
-                <div className="     ">
-                    <ul className='flex gap-3  py-2 font-[Poppins]  '>
+              <div className={`${isSticky ? 'fixed bg-white w-full left-0 z-[9999] top-0 mx-auto' : 'relative'}`}>
+              <div className="" ref={stickyDivRef}>
+                    <ul className='py-[1.3rem] px-2  gap-5 shadow-lg   mx-auto flex justify-center items-center'>
                         <li className=' border rounded-full flex px-3 tracking-tighter font-medium text-[14px]    py-1 leading-7 items-center justify-center'>Filter   <CgOptions className='mt-1 ml-1'/></li>
                         <li className='border rounded-full flex  px-3 tracking-tighter font-medium text-[14px]    py-1 leading-7 items-center justify-center'>Sort By  <RxCaretDown className='mt-1 text-xl'/></li>
                         <li className='border rounded-full flex  px-3 tracking-tighter font-medium text-[14px]    py-1 leading-7 items-center justify-center'>Fast Delivery</li>
@@ -24,6 +25,7 @@ const CityRestaurants = () => {
                         <li className='border rounded-full flex  px-3 tracking-tighter font-medium text-[14px]    py-1 leading-7 items-center justify-center'>Less than Rs. 300</li>
                     </ul>
                 </div>
+              </div>
             </div>
             <div className="card-main gap-5 flex flex-wrap">
         {/* Start of Card */}

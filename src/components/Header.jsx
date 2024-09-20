@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../../public/icons/Logo'
 import CorporateLink from '../../public/icons/CorporateLink'
 import { RxCaretDown } from "react-icons/rx";
@@ -11,10 +11,12 @@ import SideMenu from './SideMenu';
 
 
 
-const Header = () => {
+const Header = ({setIsSticky,stickyDivRef }) => {
+    const headerRef = useRef(null); // Reference to the header
     const [addressTitle, setaddressTitle] = useState('text-black'); // Initial Text color
     const [addressText, setaddressText] = useState('text-[#686b78]'); // Initial Text color
     const [addressbgColor, setaddressbgColor] = useState('bg-black'); // Initial background color
+
     const navlinks = [
         {
             link: 'Swiggy Corporate',
@@ -62,11 +64,30 @@ const Header = () => {
     const toggleSideMenu = () => {
         setIsOpen(!isOpen);
     };
+
+
+  // Add an event listener for the scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = stickyDivRef.current.getBoundingClientRect().top; // Get header height
+      
+      if (window.scrollY > headerHeight ) {
+        setIsSticky(true); // Set sticky when scrolled past the header
+      } else {
+        setIsSticky(false); // Remove sticky when above the header
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Clean up event listener
+    };
+  }, []);
     return (
         <>
            
             <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} toggleSideMenu={toggleSideMenu}/>
-            <header className=' py-4 px-2 max-w-[1250px]  mx-auto flex justify-between items-center'>
+            <header ref={headerRef} className=' py-4 px-2 max-w-[1250px]  mx-auto flex justify-between items-center'>
                 <div className="left flex items-center px-2">
                     <Logo />
                     <div onClick={toggleSideMenu}  className="address flex  items-center px-5 font-[Poppins] "
