@@ -38,7 +38,7 @@ const Categories = () => {
           </div>))
         }
       </div>
-      <hr className='mt-4 '></hr>
+      <hr className='mt-4 '></hr>gggg
     </div>
   )
 }

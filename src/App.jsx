@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Categories from './components/Categories'
 import TopRestaurant from './components/TopRestaurant '
 import CityRestaurants from './components/CityRestaurants'
-import UseRefHookTesting from './components/UseRefHookTesting'
+import States from './components/States'
 
 function App() {
   const [isSticky, setIsSticky] = useState(false); // State to track when to make the div sticky
@@ -18,6 +18,7 @@ function App() {
         <Categories/>
         <TopRestaurant/>
         <CityRestaurants isSticky={isSticky} stickyDivRef={stickyDivRef}   />
+        <States/>
       </div>
 
     </>
