@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import StateData from '../assets/Data/StateData'
+import { RxCaretDown } from 'react-icons/rx';
 const States = () => {
   const cards =  StateData.map((state, index) =>
     (<div  key={index} className={` text-black shrink-0 duration-500    w-64 `} >
@@ -32,9 +33,10 @@ const States = () => {
 
       <button
         onClick={toggleShowMore}
-        className=" justify-center border tracking-tight hover:bg-gray-200 transition-all duration-300 ease-in-out px-4 font-semibold text-[#414449] py-4 my-2 mx-2 rounded-lg"
+        className=" justify-center items-center border flex tracking-tight hover:bg-gray-200 transition-all duration-300 ease-in-out px-4 font-semibold text-[#ff5200] py-4 my-2 mx-2 rounded-lg"
       >
         {showCount === 11 ? 'Show More' : 'Show Less'}
+        <RxCaretDown className='text-3xl  text-[#ff5200]' />
       </button>
       
       
