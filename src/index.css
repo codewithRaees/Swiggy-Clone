@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Inside your global.css or custom CSS file */
+.line-clamp-3 {
+    display: -webkit-box;
+    line-clamp: 2; /* Number of lines to show before truncation */
+    box-orient: vertical;
+    overflow: hidden;
+  }
