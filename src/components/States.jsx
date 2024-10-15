@@ -21,7 +21,7 @@ const States = () => {
  };
 
   return (
-    <div className=' max-w-screen-lg mx-auto py-5 flex flex-col  '>
+    <div className=' max-w-screen-lg mx-auto pt-5 flex flex-col  '>
     <div className="sliderTop flex justify-between px-5 items-center  ">
       <h1 className='text-2xl font-extrabold font-[Poppins]'>What's on your mind?</h1>
      
@@ -42,7 +42,7 @@ const States = () => {
       
        
     </div>
-    <hr className='mt-4 '></hr>
+    <hr className='mt-4 border-black '></hr>
   </div>
   )
 }

@@ -7,6 +7,7 @@ import TopRestaurant from './components/TopRestaurant '
 import CityRestaurants from './components/CityRestaurants'
 import States from './components/States'
 import ShowMoreDivs from './components/ShowMoreDivs'
+import Footer from './components/Footer'
 
 function App() {
   const [isSticky, setIsSticky] = useState(false); // State to track when to make the div sticky
@@ -22,6 +23,7 @@ function App() {
         <TopRestaurant/>
         <CityRestaurants isSticky={isSticky} stickyDivRef={stickyDivRef}   />
         <States/>
+        <Footer/>
       </div>
 
     </>
