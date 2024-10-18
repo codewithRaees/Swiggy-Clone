@@ -1,10 +1,12 @@
 import playstore from "../../public/images/play_store.avif";
 import appstore from "../../public/images/app_store.avif";
+import FooterLogo from "../../public/icons/FooterLogo";
+import { FaFacebookF,FaInstagram , FaLinkedin ,FaPinterest , FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <footer className=" bg-[#f0f0f5]">
+      <footer className=" bg-[#f0f0f5] pb-5">
         <div className="main-wrapper px-1 max-w-screen-lg  mx-auto">
           <div className="footer-top py-5  flex justify-around ">
             <div className="left text-3xl font-bold text-wrap text-[#3d4046]">
@@ -23,13 +25,13 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="bottom-footer-wrapper">
-            <div className="left-logo"></div>
+          <div className="bottom-footer-wrapper pt-14 flex justify-around gap-3">
+            <div className="left-logo"><FooterLogo/></div>
             <div className="right-links">
-              <div className="footer-container ">
-                <div className="footer-column">
-                  <h3>Company</h3>
-                  <ul>
+              <div className="footer-container flex justify-around  gap-10 leading-5">
+                <div className="footer-column space-y-4">
+                  <h3 className="font-bold">Company</h3>
+                  <ul className="space-y-4">
                     <li>
                       <a href="#">About Us</a>
                     </li>
@@ -56,9 +58,10 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="footer-column">
-                  <h3>Contact us</h3>
-                  <ul>
+                              <div className="div space-y-20">
+                                  <div className="footer-column space-y-4">
+                  <h3 className="font-bold">Contact us</h3>
+                  <ul className="space-y-4">
                     <li>
                       <a href="#">Help & Support</a>
                     </li>
@@ -68,11 +71,24 @@ const Footer = () => {
                     <li>
                       <a href="#">Ride with us</a>
                     </li>
+                                  </ul>
+                   
+                                  </div>
+                                 <div className="footer-column space-y-4">
+                  <h3 className="font-bold">Legal</h3>
+                  <ul className="space-y-4">
+                    <li>
+                      <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                      <a href="#">Cookie Policy</a>
+                    </li>
                   </ul>
                 </div>
-                <div className="footer-column">
-                  <h3>Available in:</h3>
-                  <ul>
+                </div>
+                <div className="footer-column space-y-4">
+                  <h3 className="font-bold">Available in:</h3>
+                  <ul className="space-y-4">
                     <li>
                       <a href="#">Bangalore</a>
                     </li>
@@ -91,25 +107,14 @@ const Footer = () => {
                     <li>
                       <a href="#">Pune</a>
                     </li>
-                  </ul>
-                  <select>
+                  </ul >
+                  <select className="rounded-md bg-transparent border border-gray-500" >
                     <option>589 cities</option>
                   </select>
                 </div>
-                <div className="footer-column">
-                  <h3>Legal</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Terms & Conditions</a>
-                    </li>
-                    <li>
-                      <a href="#">Cookie Policy</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="footer-column">
-                  <h3>Life at Swiggy</h3>
-                  <ul>
+               <div className="div space-y-28"><div className="footer-column space-y-4">
+                  <h3 className="font-bold">Life at Swiggy</h3>
+                  <ul className=" space-y-4">
                     <li>
                       <a href="#">Explore with Swiggy</a>
                     </li>
@@ -121,26 +126,27 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="footer-column">
-                  <h3>Social Links</h3>
-                  <div className="social-icons">
+                <div className="footer-column  space-y-4">
+                  <h3 className="font-bold">Social Links</h3>
+                  <div className="social-icons flex gap-3">
                     <a href="#">
-                      <i className="fa fa-linkedin"></i>
+                      <FaLinkedin />
                     </a>
                     <a href="#">
-                      <i className="fa fa-instagram"></i>
+                      <FaInstagram />
                     </a>
                     <a href="#">
-                      <i className="fa fa-facebook"></i>
+                      <FaFacebookF />
                     </a>
                     <a href="#">
-                      <i className="fa fa-pinterest"></i>
+                      <FaPinterest />
                     </a>
                     <a href="#">
-                      <i className="fa fa-twitter"></i>
+                      <FaTwitter />
                     </a>
                   </div>
-                </div>
+                </div></div>
+                
               </div>
             </div>
           </div>

@@ -9,6 +9,7 @@ import States from './components/States'
 import ShowMoreDivs from './components/ShowMoreDivs'
 import Footer from './components/Footer'
 
+
 function App() {
   const [isSticky, setIsSticky] = useState(false); // State to track when to make the div sticky
   const stickyDivRef = useRef(null); // Reference to the div you want to make sticky

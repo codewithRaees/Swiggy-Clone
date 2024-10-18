@@ -90,7 +90,7 @@ const Header = ({setIsSticky,stickyDivRef }) => {
             <header ref={headerRef} className=' py-4 px-2 max-w-[1250px]  mx-auto flex justify-between items-center'>
                 <div className="left flex items-center px-2">
                     <Logo />
-                    <div onClick={toggleSideMenu}  className="address flex  items-center px-5 font-[Poppins] "
+                    <div onClick={toggleSideMenu}  className="address flex  items-center px-2 lg:px-5 font-[Poppins] "
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}>
                         <div className='flex mt-[6px] flex-col text-[14px] pl-5 '
@@ -100,10 +100,10 @@ const Header = ({setIsSticky,stickyDivRef }) => {
                         </div>
                         &nbsp;&nbsp; <span className={`mt-1 text-[14px] ${addressText} `}> Maharashtra, India</span> <RxCaretDown className='text-3xl mt-1 text-[#ff5200]' /></div>
                 </div>
-                <nav>
-                    <ul className='flex gap-6'>
+                <nav className='hidden md:block'>
+                    <ul className='flex gap-3 lg:gap-6'>
                         {
-                            navlinks.map((link, index) => <li key={index} className='hover:text-[#ff5200] text-[14px] font-semibold'><a className='flex px-1 items-center font-[Poppins]  ' href="#"><span className='px-1'>{link.icon}</span><span className='' >{link.link}<sup className='text-[#ffA700] -top-3 text-xs'>{link.sup}</sup></span></a></li>)
+                            navlinks.map((link, index) => <li key={index} className='hover:text-[#ff5200] text-[12px] lg:text-[14px] font-semibold'><a className='flex px-1 items-center font-[Poppins]  ' href="#"><span className='px-1 hidden lg:block'>{link.icon}</span><span className='' >{link.link}<sup className='text-[#ffA700] -top-3 text-xs'>{link.sup}</sup></span></a></li>)
                         }
 
                     </ul>
