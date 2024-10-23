@@ -8,11 +8,11 @@ const Footer = () => {
     <>
       <footer className=" bg-[#f0f0f5] pb-5">
         <div className="main-wrapper px-1 max-w-screen-lg  mx-auto">
-          <div className="footer-top py-5  flex justify-around ">
-            <div className="left text-3xl font-bold text-wrap text-[#3d4046]">
+          <div className="footer-top py-5 flex-col md:flex-row justify-center items-center  flex md:justify-around ">
+            <div className="left  text-[18px] md:text-3xl  font-bold text-wrap text-[#3d4046]">
               For better experience,download the Swiggy app now
             </div>
-            <div className="right flex">
+            <div className="right flex justify-center pt-2 ">
               <a href="#">
                 <img
                   src={playstore}
@@ -25,7 +25,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="bottom-footer-wrapper pt-14 flex justify-around gap-3">
+          <div className="bottom-footer-wrapper pt-3 md:pt-14 px-2 flex justify-around gap-3 flex-col md:flex-row">
             <div className="left-logo"><FooterLogo/></div>
             <div className="right-links">
               <div className="footer-container flex justify-around  gap-10 leading-5">
@@ -112,7 +112,8 @@ const Footer = () => {
                     <option>589 cities</option>
                   </select>
                 </div>
-               <div className="div space-y-28"><div className="footer-column space-y-4">
+                <div className="div space-y-28">
+                  <div className="footer-column space-y-4">
                   <h3 className="font-bold">Life at Swiggy</h3>
                   <ul className=" space-y-4">
                     <li>
@@ -126,9 +127,9 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="footer-column  space-y-4">
+                <div className="footer-column hidden md:block  space-y-4">
                   <h3 className="font-bold">Social Links</h3>
-                  <div className="social-icons flex gap-3">
+                  <div className="social-icons flex gap-3 ">
                     <a href="#">
                       <FaLinkedin />
                     </a>

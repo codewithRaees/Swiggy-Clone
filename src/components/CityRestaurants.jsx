@@ -8,10 +8,10 @@ const CityRestaurants = ({isSticky,stickyDivRef}) => {
     const [slide, setSlide] = useState(0)
   
     return (
-        <div className='city-restaurants max-w-screen-lg  mx-auto'>
-            <div className="sliderTop  justify-between px-1 py-2 items-center  ">
-                <h1 className='text-2xl font-extrabold font-[Poppins]'>Top restaurant chains in Mumbai</h1>
-              <div className={`${isSticky ? 'fixed bg-white w-full left-0 z-[9999] top-0 mx-auto' : 'relative'}`}>
+        <div className='city-restaurants max-w-screen-lg   mx-auto'>
+            <div className="sliderTop px-1 py-2 md:justify-start justify-center flex    ">
+                <h1 className='text-[16px] md:text-2xl  font-extrabold font-[Poppins]'>Top restaurant chains in Mumbai</h1>
+              <div className={`${isSticky ? 'fixed hidden md:block bg-white w-full left-0 z-[9999] top-0 mx-auto' : 'relative hidden md:block'}`}>
               <div className="" ref={stickyDivRef}>
                     <ul className='py-[1.3rem] px-2  gap-5 shadow-lg   mx-auto flex justify-center items-center'>
                         <li className=' border rounded-full flex px-3 tracking-tighter font-medium text-[14px]    py-1 leading-7 items-center justify-center'>Filter   <CgOptions className='mt-1 ml-1'/></li>
@@ -27,7 +27,7 @@ const CityRestaurants = ({isSticky,stickyDivRef}) => {
                 </div>
               </div>
             </div>
-            <div className="card-main gap-5 flex flex-wrap">
+            <div className="card-main gap-5 justify-center md:justify-start flex flex-wrap">
         {/* Start of Card */}
         { CityRestaurant.map((restaurant,index)=> 
                    (
@@ -35,7 +35,7 @@ const CityRestaurants = ({isSticky,stickyDivRef}) => {
                       transform: `translatex(-${slide * 100}%)`
                      }} key={index}>
   <div className="Test hover:scale-95 duration-300 transition-all"><div className=''>
-            <div className='w-56 h-36 relative   rounded-xl overflow-hidden'>
+            <div className='md:w-56 w-72 md:h-36 h-36 relative   rounded-xl overflow-hidden'>
            
               <img src={`/images/${restaurant.image}`} alt="" class="w-full h-full object-cover " />
               <div className="inset-0 bg-gradient-to-t from-black/60 to-transparent heading absolute ">
